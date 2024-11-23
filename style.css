@@ -1,0 +1,237 @@
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+:root{
+    --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+    --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+    --Grayish-Blue: hsl(212, 23%, 69%);
+    --Light-Grayish-Blue: hsl(210, 46%, 95%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img::selection{
+    background-color: transparent;
+}
+.contenar{
+    width: 100%;
+    padding: 0px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+@media  (min--idth:768px) {
+    .contenar{
+        width: 750px;
+    }
+}
+@media  (min--idth:992px) {
+    .contenar{
+        width: 970px;
+    }
+}
+@media  (min--idth:1200px) {
+    .contenar{
+        width: 1170px;
+    }
+}
+
+p{
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--Desaturated-Dark-Blue);
+    line-height: 140%;
+}
+
+body{
+    min-height: 100vh;
+    position: relative;
+    background-color: var(--Light-Grayish-Blue);
+    font-family: "manrope";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card {
+    max-width:770px;
+    width: 90%;
+    height: 309px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 10px;
+}
+.card .img_holder {
+    background-image: url(images/drawers.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 41%;
+    height: 100%;   
+    border-radius: 10px 0 0 10px;
+}
+.card .details{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.article-heading{
+    margin: 40px 40px 0 40px;
+}
+.article-body{
+    margin: 0 40px;
+}
+.card .details .article-heading{
+    color: var(--Very-Dark-Grayish-Blue);
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.auther{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin: 0 40px 40px 40px ;
+}
+.auther .auther-info{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.auther .auther-info .about h2{
+    font-size: 13px;
+    font-weight: 700;
+}
+.auther .auther-info img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.auther .share-button{
+    background-color: var(--Light-Grayish-Blue);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.auther .share-button img{
+    width: 15px;
+    margin-bottom: 2px;
+}
+.share{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    border-radius: 5px;
+    background-color: var(--Very-Dark-Grayish-Blue);
+    padding: 16px 30px;
+    position: absolute;
+    right: -108px;
+    top: -73px;
+}
+.share::after{
+    content: '';
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: var(--Very-Dark-Grayish-Blue) transparent transparent transparent;
+    bottom: -20px;
+}
+.share h3 , .share-mb h3{
+    font-size: 13px;
+    color: var(--Grayish-Blue);
+    font-weight: 400;
+    letter-spacing: 5px;
+}
+.share .icon , .share-mb .icon{
+    cursor: pointer;
+}
+
+.apper{
+    display: flex !important;
+}
+
+.mb-size{
+    top: 0;
+    right: 0;
+    width: 100% !important;
+    height: 100% !important;
+    justify-content: start !important;
+    border-radius: 0 0 10px 10px !important;
+    z-index: 1;
+    padding: 0 40px;
+}
+.mb-continar{
+    margin: 0 0 0 0;
+    height: 90px;
+    display: flex;
+    align-items: center;
+}
+.mb-size::after{
+    border: none;
+}
+.holder{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.darker{
+    background-color: var(--Grayish-Blue) !important;
+}
+.share-mb{
+    display: none;
+    position: absolute;
+    background-color: var(--Very-Dark-Grayish-Blue);
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    border-radius: 0  0 10px 10px;
+}
+.share-mb .icon{
+    width: 20px;
+    height: auto;
+}
+@media (max-width:800px) {
+    .card{
+        flex-direction: column;
+        height: fit-content;
+        max-width: 318px;
+        width: 100%;
+    }
+    .article-heading{
+        margin: 40px 30px 0 30px;
+    }
+    .article-body{
+        margin: 0 30px;
+    }
+    .card .img_holder{
+        width: 100%;
+        height: 200px;
+        border-radius: 10px 10px 0 0;
+    }
+    .card .details{
+        width: 100%;
+        gap:20px;
+    }
+    .card .details .article-heading{
+        font-size: 16px;
+    }
+}
